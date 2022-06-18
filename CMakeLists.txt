@@ -4,11 +4,16 @@ project(libfacedetection)
 
 cmake_minimum_required(VERSION 2.8.12)
 
+set(CMAKE_DEBUG_POSTFIX "d")
+
 option(ENABLE_NEON "whether use neon, if use arm please set it on" OFF)
 option(ENABLE_AVX512 "use avx512" OFF)
 option(ENABLE_AVX2 "use avx2" ON)
-option(DEMO "build the demo" OFF)
+option(DEMO "build the demo" ON)
 option(USE_OPENMP "Use OpenMP" ON)
+option(BUILD_SHARED_LIBS "dll" ON)
+
+set(CMAKE_INSTALL_PREFIX "../out")
 
 if (BUILD_SHARED_LIBS)
 	add_definitions(-DBUILD_SHARED_LIBS)
@@ -153,13 +158,14 @@ install(FILES "${CMAKE_BINARY_DIR}/${fdt_lib_name}ConfigVersion.cmake" DESTINATI
 
 # Create demo. OpenCV is requred.
 if (DEMO)
-    find_package(OpenCV REQUIRED)
+    find_package(OpenCV PATHS "../opencv/install/x64/vc16/lib" REQUIRED)
     include_directories(${OpenCV_INCLUDE_DIRS})
 
-    add_executable(detect-image-demo ${fdt_base_dir}/example/detect-image.cpp)
+    include_directories("E:/opencv/test/FaceDetect/")
+    add_executable(detect-image-demo ${fdt_base_dir}/example/detect-image.cpp )
     target_link_libraries(detect-image-demo ${fdt_lib_name} ${OpenCV_LIBS})
 
-    add_executable(detect-camera-demo ${fdt_base_dir}/example/detect-camera.cpp)
+    add_executable(detect-camera-demo "E:/opencv/test/FaceDetect/OpenCVVideoCapture.h" "E:/opencv/test/FaceDetect/OpenCVVideoCapture.cpp" ${fdt_base_dir}/example/detect-camera-1.cpp )
     target_link_libraries(detect-camera-demo ${fdt_lib_name} ${OpenCV_LIBS})
     
     add_executable(benchmark ${fdt_base_dir}/example/benchmark.cpp)

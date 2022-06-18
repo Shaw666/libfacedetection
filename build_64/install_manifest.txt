@@ -1,0 +1,7 @@
+E:/opencv/libfacedetection/build_64/../out/lib/facedetectiond.lib
+E:/opencv/libfacedetection/build_64/../out/bin/facedetectiond.dll
+E:/opencv/libfacedetection/build_64/../out/include/facedetection/facedetectcnn.h
+E:/opencv/libfacedetection/build_64/../out/include/facedetection/facedetection_export.h
+E:/opencv/libfacedetection/build_64/../out/lib/cmake/facedetection/facedetectionConfig.cmake
+E:/opencv/libfacedetection/build_64/../out/lib/cmake/facedetection/facedetectionConfig-debug.cmake
+E:/opencv/libfacedetection/build_64/../out/lib/cmake/facedetection/facedetectionConfigVersion.cmake

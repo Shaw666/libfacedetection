@@ -39,7 +39,6 @@ the use of this software, even if advised of the possibility of such damage.
 #include <stdio.h>
 #include <opencv2/opencv.hpp>
 #include "facedetectcnn.h"
-#include "OpenCVVideoCapture.h"
 
 //define the buffer size. Do not change the size!
 #define DETECT_BUFFER_SIZE 0x20000
@@ -47,11 +46,11 @@ using namespace cv;
 
 int main(int argc, char* argv[])
 {
-    //if(argc != 2)
-    //{
-    //    printf("Usage: %s <camera index>\n", argv[0]);
-    //    return -1;
-    //}
+    if(argc != 2)
+    {
+        printf("Usage: %s <camera index>\n", argv[0]);
+        return -1;
+    }
 
 	int * pResults = NULL; 
     //pBuffer is used in the detection functions.
@@ -65,43 +64,26 @@ int main(int argc, char* argv[])
 
 
     VideoCapture cap;
-    //Mat im;
-    //
-    //if( isdigit(argv[1][0]))
-    //{
-        cap.open(0);
+    Mat im;
+    
+    if( isdigit(argv[1][0]))
+    {
+        cap.open(argv[1][0]-'0');
         if(! cap.isOpened())
         {
             cerr << "Cannot open the camera." << endl;
             return 0;
         }
-    //}
-    //OpenCVVideoCapture cap(std::to_string(0));
+    }
 
     if( cap.isOpened())
-    //if(cap.startCapture() == 0)
     {
         while(true)
         {
-            //im.release();
-            Mat image;
-            TickMeter cvtm1;
-            cvtm1.start();
-            cap >> image;
-            //Mat img_small;
-            cv::resize(image, image, Size(image.cols / 2, image.rows / 2));
-            cvtm1.stop();
-            printf("c time = %gms\n", cvtm1.getTimeMilli());
-            //cap.readFrame(image);
-
-            if (image.empty()) {
-                this_thread::sleep_for(std::chrono::milliseconds(1));
-                continue;
-            }
-            
+            cap >> im;
             //cout << "Image size: " << im.rows << "X" << im.cols << endl;
-            //Mat image = im.clone();
-
+            Mat image = im.clone();
+            cv::resize(image, image, Size(image.cols / 2, image.rows / 2));
             ///////////////////////////////////////////
             // CNN face detection 
             // Best detection rate
@@ -111,7 +93,7 @@ int main(int argc, char* argv[])
             TickMeter cvtm;
             cvtm.start();
 
-            pResults = facedetect_cnn(pBuffer,(unsigned char*)(image.ptr(0)), image.cols, image.rows, (int)image.step);
+            pResults = facedetect_cnn(pBuffer, (unsigned char*)(image.ptr(0)), image.cols, image.rows, (int)image.step);
             
             cvtm.stop();    
             printf("time = %gms\n", cvtm.getTimeMilli());

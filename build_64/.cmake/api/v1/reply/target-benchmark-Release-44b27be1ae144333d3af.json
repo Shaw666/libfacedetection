@@ -1,0 +1,483 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "Release/benchmark.exe"
+		},
+		{
+			"path" : "Release/benchmark.pdb"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"target_link_libraries",
+			"add_compile_options",
+			"add_definitions",
+			"INCLUDE_DIRECTORIES",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 171,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 172,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 78,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 80,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 19,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 96,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 113,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 130,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 164,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 162,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc -mavx2 -mfma -openmp /MD /O2 /Ob2 /DNDEBUG"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "/MP"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "/utf-8"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 5,
+					"define" : "BUILD_SHARED_LIBS"
+				},
+				{
+					"backtrace" : 6,
+					"define" : "_ENABLE_AVX2"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 7,
+					"path" : "E:/opencv/libfacedetection/src"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "E:/opencv/libfacedetection/facedetection"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "E:/opencv/libfacedetection/build_64"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "E:/opencv/test/FaceDetect"
+				},
+				{
+					"backtrace" : 10,
+					"isSystem" : true,
+					"path" : "E:/opencv/opencv/install/include"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					2
+				],
+				"standard" : "11"
+			},
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "facedetection::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "benchmark::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc -mavx2 -mfma -openmp /MD /O2 /Ob2 /DNDEBUG",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "/machine:x64  /INCREMENTAL:NO /subsystem:console",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "Release\\facedetection.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_gapi455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_stitching455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_aruco455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_barcode455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_bgsegm455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_bioinspired455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_ccalib455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_dnn_objdetect455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_dnn_superres455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_dpm455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_face455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_fuzzy455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_hfs455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_img_hash455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_intensity_transform455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_line_descriptor455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_mcc455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_quality455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_rapid455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_reg455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_rgbd455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_saliency455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_stereo455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_structured_light455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_superres455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_surface_matching455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_tracking455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_videostab455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_wechat_qrcode455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_xfeatures2d455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_xobjdetect455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_xphoto455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_shape455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_highgui455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_datasets455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_plot455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_text455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_ml455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_phase_unwrapping455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_optflow455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_ximgproc455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_video455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_videoio455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_imgcodecs455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_objdetect455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_calib3d455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_dnn455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_features2d455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_flann455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_photo455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_imgproc455.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv\\opencv\\install\\x64\\vc16\\lib\\opencv_core455.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "benchmark",
+	"nameOnDisk" : "benchmark.exe",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "example/benchmark.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}
