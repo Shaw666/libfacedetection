@@ -1,3 +1,0 @@
-[submodule "libfacedetection"]
-	path = libfacedetection
-	url = https://github.com/Shaw666/libfacedetection.git
